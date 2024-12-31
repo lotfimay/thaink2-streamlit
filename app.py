@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
+import os
+import sys
 
-
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from utils import load_data_from_data_base, generate_model_dict, split_forecasts_by_model, create_line_plot,create_bar_chart,combine_backtest_forecast
 
 
