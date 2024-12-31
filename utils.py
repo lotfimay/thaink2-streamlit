@@ -1,9 +1,13 @@
 import os
+import sys
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import pandas as pd
-from th2analytics_py.th2analytics.forecasting import ForecastingAPI
 import plotly.graph_objects as go
+
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
+from th2analytics_py.th2analytics.forecasting import ForecastingAPI
 
 # Load environment variables from a .env file
 load_dotenv()
